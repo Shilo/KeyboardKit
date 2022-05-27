@@ -48,7 +48,8 @@ class KeyboardViewController: KeyboardInputViewController {
         // Setup the locales that the keyboard supports
         // 💡 This is already done and just here to show how
         // 💡 This is overwritten if Pro is registered below
-        keyboardContext.locales = [KeyboardLocale.english.locale]
+        keyboardContext.locales = [KeyboardLocale.english.locale,
+                                   KeyboardLocale.swedish.locale]
         
         // Setup a custom, demo-specific action handler
         // 💡 Custom action handlers can handle custom logic
@@ -62,7 +63,8 @@ class KeyboardViewController: KeyboardInputViewController {
         // 💡 This is overwritten if Pro is registered below
         keyboardInputSetProvider = StandardKeyboardInputSetProvider(
             context: keyboardContext,
-            providers: [EnglishKeyboardInputSetProvider()])
+            providers: [EnglishKeyboardInputSetProvider(),
+                        SwedishKeyboardInputSetProvider()])
         
         // Setup a layout with .emojis instead of .dictation
         // 💡 A keyboard layout specifies the all keys/sizes
@@ -89,7 +91,11 @@ class KeyboardViewController: KeyboardInputViewController {
         // Setup KeyboardKit Pro. This unlocks more features.
         // 💡 Disable this line to run demo without Pro mode.
         //
-        setupPro(withLicenseKey: "299B33C6-061C-4285-8189-90525BCAF098", view: keyboardView)
+        //setupPro(withLicenseKey: "299B33C6-061C-4285-8189-90525BCAF098", view: keyboardView)
+        
+        // Shilo edit
+        KeyboardInputSetProviderData.printKeyboardInputSets(for: keyboardInputSetProvider, keyboardContext: keyboardContext)
+        SecondaryCalloutActionProviderData.printSecondaryCallouts(for: keyboardSecondaryCalloutActionProvider, keyboardContext: keyboardContext)
     }
     
     

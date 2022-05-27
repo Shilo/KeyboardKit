@@ -16,7 +16,7 @@ import Foundation
  and bind it to the input view controller when the extension
  is started. You can use it and replace it with a custom one.
  */
-public protocol KeyboardInputSetProvider: AnyObject {
+public protocol KeyboardInputSetProvider: NSObject {
     
     func alphabeticInputSet() -> AlphabeticKeyboardInputSet
     func numericInputSet() -> NumericKeyboardInputSet

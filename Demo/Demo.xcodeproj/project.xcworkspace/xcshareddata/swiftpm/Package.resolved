@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "KeyboardKit",
-        "repositoryURL": "https://github.com/KeyboardKit/KeyboardKit",
+        "repositoryURL": "https://github.com/Shilo/KeyboardKit",
         "state": {
           "branch": "master",
-          "revision": "c5d8215676331c9b5fc20ec49dde0959e02fe4c1",
+          "revision": "f4be631e91e1d9fa97bb5e1b6c537b1416f8ef06",
           "version": null
         }
       },
